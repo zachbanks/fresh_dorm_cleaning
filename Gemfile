@@ -18,3 +18,8 @@ group :development, :test do
   gem 'turn', :require => false
   gem 'rspec-rails'
 end
+
+group :production do
+  # Heroku gems.
+  gem 'pg' 
+end
