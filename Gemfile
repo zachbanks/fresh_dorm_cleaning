@@ -17,4 +17,11 @@ group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false
   gem 'rspec-rails'
+  
+  # Guard.
+  gem 'rb-fsevent'
+  gem 'guard-rspec'
+#  gem 'livereload'
+#  gem 'guard-sass'
+  gem 'growl_notify'
 end
