@@ -18,6 +18,8 @@ group :development, :test do
   gem 'turn', :require => false
   gem 'rspec-rails'
   
+  gem 'pry'
+  
   # Guard.
   gem 'rb-fsevent'
   gem 'guard-rspec'
