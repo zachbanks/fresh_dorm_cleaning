@@ -28,6 +28,7 @@ group :development, :test do
   gem 'growl_notify'
 end
 
+# Don't forget to run bundle install --without production the first time you bundle this app on a new computer.
 group :production do
   # Heroku gems.
   gem 'pg' 
