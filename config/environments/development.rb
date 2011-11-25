@@ -28,3 +28,9 @@ FreshDormCleaning::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 end
+
+# Replace IRB with Pry.
+silence_warnings do
+  require 'pry'
+  IRB = Pry
+end
