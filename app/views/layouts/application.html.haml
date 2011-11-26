@@ -11,6 +11,12 @@
 		/ Render header.
 		= render 'layouts/header'
 		
+		/ Render any flash messages.
+		%section
+			- flash.each do |key, value|
+				%div{:class => "flash #{key}"}
+					= value
+		
 		/ Render main content.
 		= yield
 		
