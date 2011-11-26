@@ -1,7 +1,7 @@
 class FeedbackMailer < ActionMailer::Base
-  default :to => 'cityboyzoutdoors@gmail.com'
+  default :to => 'freshdormcleaningknt@gmail.com'
   def send_feedback(sender)
     @sender = sender
-    mail(:from => sender.email, :subject => "#{sender.email} - #{sender.subject}")
+    mail(:from => sender.email, :subject => "Contact Us - #{sender.name} - #{sender.subject}")
   end
 end

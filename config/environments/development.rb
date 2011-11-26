@@ -35,8 +35,8 @@ FreshDormCleaning::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => "gmail.com",
-    :user_name            => "cityboyzoutdoors@gmail.com",
-    :password             => "codyisqueer",
+    :user_name            => "freshdormcleaningknt@gmail.com",
+    :password             => "cleanup2011",
     :authentication       => :plain,
     :enable_starttls_auto => true
   }
