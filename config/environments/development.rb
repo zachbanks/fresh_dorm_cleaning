@@ -27,6 +27,20 @@ FreshDormCleaning::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # Feedback Mailer.
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "gmail.com",
+    :user_name            => "cityboyzoutdoors@gmail.com",
+    :password             => "codyisqueer",
+    :authentication       => :plain,
+    :enable_starttls_auto => true
+  }
+  
 end
 
 # Replace IRB with Pry.
@@ -34,16 +48,3 @@ silence_warnings do
   require 'pry'
   IRB = Pry
 end
-
-# Feedback Mailer.
-config.action_mailer.default_url_options = { :host => "localhost:3000" }
-
-ActionMailer::Base.smtp_settings = {
-  :address              => "smtp.gmail.com",
-  :port                 => 587,
-  :domain               => "gmail.com",
-  :user_name            => "cityboyzoutdoors@gmail.com",
-  :password             => "codyisqueer",
-  :authentication       => :plain,
-  :enable_starttls_auto => true
-}
