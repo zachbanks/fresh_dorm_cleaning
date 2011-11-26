@@ -1,5 +1,4 @@
-/ TODO: Render errors.
-/ = render :partial => 'shared/error_messages', :locals => { :object => @feedback }
+= render :partial => 'shared/error_messages', :locals => { :object => @feedback }
 
 / TODO: Rewrite with Formtastic.
 = form_for @feedback, :validate => true ,:url => { :action => 'create' }, :html => { :method => :post } do |f|
