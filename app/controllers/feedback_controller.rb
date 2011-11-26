@@ -7,7 +7,7 @@ class FeedbackController < ApplicationController
   def create
     @title = "Contact"
     @feedback = Feedback.new(params[:feedback])
-    if @feedback.save
+    if @feedback.save!
       redirect_to contact_path, :notice => "Thanks for your message! We will be in touch shortly!"
     else
       render :action => :new

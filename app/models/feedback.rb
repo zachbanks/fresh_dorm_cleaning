@@ -34,7 +34,7 @@ class Feedback
   def to_key
   end
   
-  def save
+  def save!
     if self.valid?
       FeedbackMailer.send_feedback(self).deliver
       true
@@ -42,5 +42,4 @@ class Feedback
       false
     end
   end
-  
 end
