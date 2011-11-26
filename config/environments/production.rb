@@ -57,4 +57,19 @@ FreshDormCleaning::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  # Feedback Mailer.
+  # NOTE: Will need to be changed.
+  config.action_mailer.default_url_options = { :host => "http://freshdormcleaning.heroku.com" }
+  
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "gmail.com",
+    :user_name            => "freshdormcleaningknt@gmail.com",
+    :password             => "cleanup2011",
+    :authentication       => :plain,
+    :enable_starttls_auto => true
+  }
+  
 end

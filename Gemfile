@@ -6,6 +6,8 @@ gem 'sqlite3'
 gem 'jquery-rails'
 
 gem 'haml-rails'
+gem 'formtastic'
+gem 'rdiscount' # Markdown parsing.
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"

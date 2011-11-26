@@ -2,13 +2,20 @@
 %html
 	%head
 		%title= title
-		= stylesheet_link_tag "application"
-		= javascript_include_tag "application" 
+		
+		/ Render Style Sheets.
+		= render 'layouts/stylesheets'
 		= csrf_meta_tags
 %body{:id => "#{params[:controller].parameterize}_controller"}
 	.container
 		/ Render header.
 		= render 'layouts/header'
+		
 		/ Render main content.
 		= yield
+		
+		/ Render footer.
+		= render 'layouts/footer'
+		
+		/ Debugging info for development.
 		= debug(params) if Rails.env.development?

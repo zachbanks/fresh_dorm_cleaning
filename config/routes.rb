@@ -5,6 +5,11 @@ FreshDormCleaning::Application.routes.draw do
   
   root :to => 'Pages#home'
   
+  scope :controller => :feedback do
+    get '/contact' => :new
+    post '/contact' => :create
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
