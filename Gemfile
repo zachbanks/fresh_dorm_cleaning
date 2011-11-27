@@ -6,7 +6,7 @@ gem 'sqlite3'
 gem 'jquery-rails'
 
 gem 'haml-rails'
-gem 'formtastic'
+gem 'decent_exposure'
 gem 'rdiscount' # Markdown parsing.
 
 group :assets do
