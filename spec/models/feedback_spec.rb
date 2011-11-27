@@ -21,7 +21,7 @@ describe Feedback do
         feedback = Feedback.new
         feedback.save!
         feedback.errors.any?.should be_true
-        feedback.errors[:email][1].should =~ /invalid/ # Crude, but it works.
+        feedback.errors[:email][1].should =~ /not formatted properly/ # Crude, but it works.
       end
       it "should reject names shorter than 6 characters" do
         name = 'a'
