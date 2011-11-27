@@ -15,6 +15,11 @@ group :assets do
   gem 'uglifier'
 end
 
+group :development do
+  gem 'letter_opener' # Opens ActionMailer messages in browser instead of sending them.
+end
+
+# TODO: Move these to either development or test.
 group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false

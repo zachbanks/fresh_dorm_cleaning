@@ -49,3 +49,9 @@ module FreshDormCleaning
     config.autoload_paths += Dir["#{config.root}/lib/validators/**/"]
   end
 end
+
+# Replace IRB with Pry.
+silence_warnings do
+  require 'pry'
+  IRB = Pry
+end
