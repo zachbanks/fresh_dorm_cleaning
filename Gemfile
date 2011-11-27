@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'decent_exposure'
 gem 'rdiscount' # Markdown parsing.
+gem 'pry'
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
@@ -24,8 +25,6 @@ group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false
   gem 'rspec-rails'
-  
-  gem 'pry'
   
   # Guard.
   gem 'rb-fsevent'
