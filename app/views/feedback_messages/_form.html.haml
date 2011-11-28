@@ -1,7 +1,6 @@
-= render :partial => 'shared/error_messages', :locals => { :object => @feedback }
+= render :partial => 'shared/error_messages', :locals => { :object => feedback_message }
 
-/ TODO: Rewrite with Formtastic.
-= form_for @feedback, :validate => true ,:url => { :action => 'create' }, :html => { :method => :post } do |f|
+= form_for feedback_message, :validate => true ,:url => { :action => 'create' }, :html => { :method => :post } do |f|
 	%p
 		= f.label :name
 		%br

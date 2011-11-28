@@ -1,0 +1,7 @@
+%h2 Contact Us Form Message
+%h3= "Subject: #{@message.subject}"
+%h4= "From: #{@message.name} - #{@message.email}"
+%strong Message:
+%p
+	:markdown
+		#{@message.message}

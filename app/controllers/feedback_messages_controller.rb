@@ -1,13 +1,14 @@
-class FeedbackController < ApplicationController
+class FeedbackMessagesController < ApplicationController
+  expose(:feedback_message)
+  
   def new
     @title = "Contact"
-    @feedback = Feedback.new(:id => 1)
   end
-  
+
   def create
     @title = "Contact"
-    @feedback = Feedback.new(params[:feedback])
-    if @feedback.save!
+    if feedback_message.save
+      Mailer.feedback(feedback_message).deliver
       redirect_to contact_path, :notice => "Thanks for your message! We will be in touch shortly!"
     else
       render :action => :new

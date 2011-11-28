@@ -1,11 +1,13 @@
 FreshDormCleaning::Application.routes.draw do
   
+  resources :feedback_messages
+
   get 'pages/home'
   get '/about' => 'pages#about'
   
   root :to => 'Pages#home'
   
-  scope :controller => :feedback do
+  scope :controller => :feedback_messages do
     get '/contact' => :new
     post '/contact' => :create
   end
