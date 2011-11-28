@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe FeedbackMailer do
+describe Mailer do
 
   before do
     ActionMailer::Base.delivery_method = :test
@@ -8,8 +8,8 @@ describe FeedbackMailer do
     ActionMailer::Base.deliveries = []
   end
 
-  let(:feedback) { mock_model(Feedback).as_null_object }
-  let!(:mail) { FeedbackMailer.send_feedback(feedback).deliver }
+  let(:feedback) { mock_model(FeedbackMessage).as_null_object }
+  let!(:mail) { Mailer.feedback(feedback).deliver }
 
   it "should deliver an email successfully" do
     ActionMailer::Base.deliveries.size.should == 1

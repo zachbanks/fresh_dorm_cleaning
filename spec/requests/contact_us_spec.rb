@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Contact Us" do
   it "should email website admin" do
-    message = Factory(:feedback)
+    message = Factory(:feedback_message)
     visit contact_path
     fill_in "Name", :with => message.name
     fill_in "Email", :with => message.email
