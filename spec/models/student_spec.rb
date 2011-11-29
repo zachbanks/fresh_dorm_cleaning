@@ -58,15 +58,12 @@ describe Student do
   describe "phone number formatting" do
     it "should strip formatting and store number in format 3305557477" do
       subject.phone_number = "(123) 456-7890"
-      subject.save
       subject.phone_number.should == '1234567890'
       
       subject.phone_number = "123-456-7890"
-      subject.save
       subject.phone_number.should == '1234567890'
       
       subject.phone_number = "123.456.7890"
-      subject.save
       subject.phone_number.should == '1234567890'
     end
   end
