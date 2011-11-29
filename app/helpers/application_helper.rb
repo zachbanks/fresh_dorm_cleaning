@@ -1,10 +1,6 @@
 module ApplicationHelper
-  def title
+  def render_title
     base_title = "Fresh Dorm Cleaning"
-    unless @title
-      base_title
-    else
-      "#{base_title} | #@title"
-    end
+    @title ? "#{base_title} | #{@title}" : base_title
   end
 end
