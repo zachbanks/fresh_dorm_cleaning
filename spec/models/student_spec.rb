@@ -32,22 +32,10 @@ describe Student do
       subject.errors[:email].should_not be_empty
     end
     
-    it "should validate phone number formats" do
+    it "should validate phone number format" do
       subject.phone_number = "3305552422"
       subject.save
-      subject.errors[:phone_number].should be_empty
-      
-      subject.phone_number = "(330) 555-2422"
-      subject.save
-      subject.errors[:phone_number].should be_empty
-      
-      subject.phone_number = "330-555-2422"
-      subject.save
-      subject.errors[:phone_number].should be_empty      
-            
-      subject.phone_number = "330.555.2422"
-      subject.save
-      subject.errors[:phone_number].should be_empty          
+      subject.errors[:phone_number].should be_empty       
   
       subject.phone_number = "invalid number"
       subject.save
