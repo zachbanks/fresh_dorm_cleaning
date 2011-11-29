@@ -1,4 +1,4 @@
-class Student < ActiveRecord::Base
+class Person < ActiveRecord::Base
   attr_accessible :name, :email, :phone_number
   attr_reader :phone_number # So it generates the @phone_number ivars so you can reference them
   
@@ -21,7 +21,7 @@ end
 
 # == Schema Information
 #
-# Table name: students
+# Table name: people
 #
 #  id           :integer         not null, primary key
 #  name         :string(255)

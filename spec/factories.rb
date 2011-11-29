@@ -6,7 +6,7 @@ FactoryGirl.define do
     message 'Message'
   end
   
-  factory :student do
+  factory :person do
     name 'John Doe'
     email 'johndoe@example.com'
     phone_number '1234567890'

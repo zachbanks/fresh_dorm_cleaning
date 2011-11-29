@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Student do
-  subject { Factory(:student) }
+describe Person do
+  subject { Factory(:person) }
   describe "basic functions" do
     it "should have name, email, and phone number properties" do
       subject.name.should_not be_nil
@@ -58,7 +58,7 @@ describe Student do
 end
 # == Schema Information
 #
-# Table name: students
+# Table name: people
 #
 #  id           :integer         not null, primary key
 #  name         :string(255)

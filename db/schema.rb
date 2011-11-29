@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111129081751) do
+ActiveRecord::Schema.define(:version => 20111129143339) do
 
   create_table "feedback_messages", :force => true do |t|
     t.string   "name"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20111129081751) do
     t.datetime "updated_at"
   end
 
-  create_table "students", :force => true do |t|
+  create_table "people", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.string   "phone_number"
