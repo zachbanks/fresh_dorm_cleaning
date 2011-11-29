@@ -10,7 +10,7 @@ describe "Contact Us" do
     fill_in "Message", :with => message.message
     click_button "Submit"
     page.should have_content("Thanks for your message")
-    last_email.to.should include("freshdormcleaningknt@gmail.com")
+    last_email.to.should include(ConfidentialData.main_mailer_email)
   end
   
   it "should not email when there is fields are blank" do

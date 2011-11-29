@@ -6,13 +6,11 @@ describe FeedbackMessage do
   end
   
   describe "validations" do
-    before(:each) do
-      @feedback = FeedbackMessage.new(@attr)
-      @feedback.save
-    end
+    let(:feedback) { FactoryGirl.create(:feedback_message) }
+    
     context "success" do
       it "should allow valid emails" do
-        @feedback.errors.empty?.should be_true
+        feedback.errors.empty?.should be_true
       end
     end
     

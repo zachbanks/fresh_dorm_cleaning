@@ -31,5 +31,5 @@ RSpec.configure do |config|
   
   # Action Mailer testing helpers.
   config.include(MailerMacros)
-  config.before(:each) {  reset_emails }
+  config.before(:each) { reset_emails }
 end
