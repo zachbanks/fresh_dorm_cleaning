@@ -5,4 +5,10 @@ FactoryGirl.define do
     subject "Subject"
     message 'Message'
   end
+  
+  factory :student do
+    name 'John Doe'
+    email 'johndoe@example.com'
+    phone_number '1234567890'
+  end
 end
