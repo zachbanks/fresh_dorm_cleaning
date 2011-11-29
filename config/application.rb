@@ -47,6 +47,9 @@ module FreshDormCleaning
     
     # Add custom validators to load path.
     config.autoload_paths += Dir["#{config.root}/lib/validators/**/"]
+    
+    # Add lib/custom_code to Rails load path.
+    config.autoload_paths += Dir["#{config.root}/lib/custom_code/**/"]
   end
 end
 

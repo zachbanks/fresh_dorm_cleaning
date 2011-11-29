@@ -15,8 +15,9 @@ describe Mailer do
     ActionMailer::Base.deliveries.size.should == 1
   end
 
-  it "should be sent to freshdormcleaningknt@gmail.com" do
-    mail.to.should == ['freshdormcleaningknt@gmail.com']
+  it "should be sent to the main mailer email" do
+    email = ConfidentialData.main_mailer_email
+    mail.to.should == [email]
   end
 
 end
