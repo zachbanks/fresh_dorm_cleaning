@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/ctran/annotate_models.git
+  revision: ab62e8c131c9a67d687fa23ed5ee05c3bf450852
+  specs:
+    annotate (2.4.1.beta1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -185,6 +191,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate!
   capybara
   coffee-rails (~> 3.1.0)
   decent_exposure

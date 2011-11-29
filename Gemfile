@@ -18,6 +18,7 @@ end
 
 group :development do
   gem 'letter_opener' # Opens ActionMailer messages in browser instead of sending them.
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 end
 
 # TODO: Move these to either development or test.
