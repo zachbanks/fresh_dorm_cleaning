@@ -11,7 +11,7 @@ module ConfidentialData
     
     # The password that accompanies the main mailer email address.
     def main_mailer_password
-      "cleanup2011"
+      ENV['MAIN_MAILER_PASSWORD'] # Set and removed using heroku config:add/remove KEY.
     end
   end
 end
