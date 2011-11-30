@@ -9,14 +9,21 @@ class Client < ActiveRecord::Base
   # Strip formatting and return raw phone number in format 1234567890
   def phone_number=(number)
     unless number =~ /[0-9]{10}/
-      new_number = number
-      chars = ['(', ')', '-', '.', ' ']
-      chars.each { |c| new_number.gsub!(c, '') }
-      @phone_number = new_number
+      @phone_number = strip_phone_number(number)
     else
       @phone_number = number
     end
   end
+  
+  # Removes all formatting from a phone number and returns it in the format: 1234567890.
+  def strip_phone_number(phone_number)
+    stripped_number = phone_number
+    chars_to_strip = ['(', ')', '-', '.', ' ']
+    chars_to_strip.each { |char| stripped_number.gsub!(char, '') }
+    stripped_number
+  end
+  
+  private :strip_phone_number
 end
 
 # == Schema Information
