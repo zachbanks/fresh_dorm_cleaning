@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Person do
-  subject { Factory(:person) }
+describe Client do
+  subject { Factory(:client) }
   describe "basic functions" do
     it "should have name, email, and phone number properties" do
       subject.name.should_not be_nil
