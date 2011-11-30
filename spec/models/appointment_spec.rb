@@ -11,6 +11,6 @@ describe Appointment do
   end
   
   describe "associations" do
-    it { should have_one(:client) }
+    it { should belong_to(:client) }
   end
 end

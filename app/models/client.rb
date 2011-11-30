@@ -5,6 +5,8 @@ class Client < ActiveRecord::Base
   validates :name, :email, :presence => true
   validates :email, :email_format => true
   validates :phone_number, :phone_number_formats => true
+  
+  has_many :appointments
 
   # Strip formatting and return raw phone number in format 1234567890
   def phone_number=(number)

@@ -1,5 +1,5 @@
 class Appointment < ActiveRecord::Base
   attr_accessible :date
   
-  has_one :client
+  belongs_to :client
 end

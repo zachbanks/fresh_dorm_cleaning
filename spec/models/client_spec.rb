@@ -55,6 +55,10 @@ describe Client do
       subject.phone_number.should == '1234567890'
     end
   end
+  
+  describe "assocations" do
+    it { should have_many(:appointments) }
+  end
 end
 # == Schema Information
 #
