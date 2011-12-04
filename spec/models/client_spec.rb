@@ -41,6 +41,20 @@ describe Client do
       subject.save
       subject.errors[:phone_number].should_not be_empty
     end
+    
+    it "should not run phone number formatter validations if no number is given" do
+      c = Client.new(:name => "John Doe", :email => 'jd@example.com')
+      c.valid?.should be_true
+      c.save
+      c.errors[:phone_number].should be_empty
+    end
+    
+    it "should not save if the appointment model doesn't pass its validations" do
+      a = Appointment.new # Invalid appointment.
+      c = Client.new(:name => "John Doe", :email => "johndoe@example.com")
+      c.appointments << a
+      c.valid?.should be_false
+    end
   end
   
   describe "phone number formatting" do
@@ -60,6 +74,7 @@ describe Client do
     it { should have_many(:appointments) }
   end
 end
+
 # == Schema Information
 #
 # Table name: people

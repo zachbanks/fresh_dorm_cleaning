@@ -1,5 +1,6 @@
 class PhoneNumberFormatsValidator < ActiveModel::EachValidator
   def validate_each(object, attribute, value)
+    return if value.blank?
     unless correctly_formatted?(value)
       object.errors[attribute] << (options[:message] || "is not formatted properly")
     end

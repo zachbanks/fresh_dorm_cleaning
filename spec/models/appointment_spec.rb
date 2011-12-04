@@ -18,6 +18,13 @@ describe Appointment do
   
   describe "validations" do
     it { should validate_presence_of(:date) }
+    
+    it "should not save if the client model doesn't pass its validations" do
+      a = Appointment.new(date: DateTime.now)
+      c = Client.new # Invalid client.
+      a.client = c
+      a.valid?.should be_false
+    end
   end
   
   describe "associations" do
