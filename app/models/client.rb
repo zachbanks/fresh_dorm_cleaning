@@ -1,5 +1,5 @@
 class Client < ActiveRecord::Base
-  attr_accessible :name, :email, :phone_number
+  attr_accessible :name, :email, :phone_number, :campus, :dorm, :room_number
   attr_reader :phone_number # So it generates the @phone_number ivars so you can reference them
   
   validates :name, :email, :presence => true
@@ -38,5 +38,8 @@ end
 #  phone_number :string(255)
 #  created_at   :datetime
 #  updated_at   :datetime
+#  campus       :string(255)
+#  dorm         :string(255)
+#  room_number  :integer
 #
 

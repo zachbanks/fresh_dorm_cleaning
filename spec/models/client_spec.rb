@@ -2,11 +2,18 @@ require 'spec_helper'
 
 describe Client do
   subject { Factory(:client) }
+  
   describe "basic functions" do
     it "should have name, email, and phone number properties" do
       subject.name.should_not be_nil
       subject.email.should_not be_nil
       subject.phone_number.should_not be_nil
+    end
+    
+    it "should have a campus, dorm, and room number" do
+      subject.campus.should_not be_nil
+      subject.dorm.should_not be_nil
+      subject.room_number.should_not be_nil
     end
   end
   
@@ -77,7 +84,7 @@ end
 
 # == Schema Information
 #
-# Table name: people
+# Table name: clients
 #
 #  id           :integer         not null, primary key
 #  name         :string(255)
@@ -85,5 +92,8 @@ end
 #  phone_number :string(255)
 #  created_at   :datetime
 #  updated_at   :datetime
+#  campus       :string(255)
+#  dorm         :string(255)
+#  room_number  :integer
 #
 

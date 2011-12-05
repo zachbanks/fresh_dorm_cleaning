@@ -31,3 +31,14 @@ describe Appointment do
     it { should belong_to(:client) }
   end
 end
+# == Schema Information
+#
+# Table name: appointments
+#
+#  id         :integer         not null, primary key
+#  date       :datetime
+#  created_at :datetime
+#  updated_at :datetime
+#  client_id  :integer
+#
+

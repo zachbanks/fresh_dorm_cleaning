@@ -10,5 +10,8 @@ FactoryGirl.define do
     name 'John Doe'
     email 'johndoe@example.com'
     phone_number '1234567890'
+    campus 'Kent State Unversity'
+    dorm 'Wright'
+    room_number 320
   end
 end
