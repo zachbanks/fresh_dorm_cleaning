@@ -168,6 +168,10 @@ GEM
       rubyzip
     sexp_processor (3.0.8)
     shoulda-matchers (1.0.0)
+    simplecov (0.5.4)
+      multi_json (~> 1.0.3)
+      simplecov-html (~> 0.5.3)
+    simplecov-html (0.5.3)
     slop (2.1.0)
     sprockets (2.0.3)
       hike (~> 1.2)
@@ -210,6 +214,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.1.0)
   shoulda-matchers
+  simplecov
   sqlite3
   turn
   uglifier

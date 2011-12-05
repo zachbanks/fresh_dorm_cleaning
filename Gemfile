@@ -39,6 +39,7 @@ group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+  gem 'simplecov'
 end
 
 # Don't forget to run bundle install --without production the first time you bundle this app on a new computer.
