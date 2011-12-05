@@ -14,6 +14,17 @@ require 'capybara/rspec'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
+  
+  # == Setup RSpec output.
+  # Use color in STDOUT
+  config.color_enabled = true
+
+  # Use color not only in STDOUT but also in pagers and files
+  config.tty = true
+
+  # Use the specified formatter
+  config.formatter = :documentation # :progress, :html, :textmate
+  
   # == Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
